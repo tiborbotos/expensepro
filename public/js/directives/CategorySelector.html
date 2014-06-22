@@ -1,0 +1,16 @@
+<div class="category-selector-container">
+	<ul>
+		<li ng-repeat="category in categories">
+			<div>
+				<a href="#" class="top-level" ng-click="showSubCategories(category)">{{category.label}}</a>
+				<div class="sub-category" ng-show="category.sub && category.selectedsubcategory">
+					<ul>
+						<li ng-repeat="subcategory in category.sub">
+							<a class="sub-level {{subcategory.id == selectedCategory.id ? 'selected' : ''}}" ng-click="selectCategory(subcategory)" href="#">{{subcategory.label}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

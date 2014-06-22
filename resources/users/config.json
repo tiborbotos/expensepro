@@ -1,0 +1,37 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"network": {
+			"name": "network",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "network",
+			"order": 0
+		},
+		"nid": {
+			"name": "nid",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "nid",
+			"order": 1
+		},
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 2
+		},
+		"createdAt": {
+			"name": "createdAt",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "createdAt",
+			"order": 3
+		}
+	}
+}

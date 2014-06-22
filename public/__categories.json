@@ -1,0 +1,73 @@
+{
+	"userid": 1,
+	"createdat": "",
+	"updatedat": "",
+	"categories": [
+		{
+			"id": "asdas-qwd",
+			"label": "Autó",
+			"sub": [
+				{ "id": 41, "label": "Road services" },
+				{ "id": 42, "label": "Fuel" },
+				{ "id": 43, "label": "Insurance" },
+				{ "id": 44, "label": "Lease" },
+				{ "id": 45, "label": "Maintenance" },
+				{ "id": 46, "label": "Tax" },
+				{ "id": 47, "label": "Other" }
+			]
+		},
+		{
+			"id": "as234sdasd-vsdfsdf",
+			"label": "Szórakozás",
+			"sub": [
+				{ "id": 51, "label": "Concert" },
+				{ "id": 52, "label": "Cinema" },
+				{ "id": 53, "label": "Party" },
+				{ "id": 54, "label": "Sport" }
+			]
+		},
+		{
+			"id": "as234sdasdafasd-vsdfsdf",
+			"label": "Család",
+			"sub": [
+				{ "id": 65, "label": "Child Care" },
+				{ "id": 665, "label": "Child Education" },
+				{ "id": 655, "label": "Toy" },
+				{ "id": 625, "label": "Other" }
+			]
+		},
+		{
+			"id": "eadaas234sdasdafasd-vsdfsdf",
+			"label": "Étel",
+			"sub": [
+				{ "id": 7, "label": "Groceries" },
+				{ "id": 7662345, "label": "Fast Food" },
+				{ "id": 765512, "label": "Ordered" },
+				{ "id": 76225, "label": "Snack" },
+				{ "id": 7621315, "label": "Restaurant" }
+			]
+		},
+		{
+			"id": "eweqqwadaas234sdasdafasd-vsdfsdf",
+			"label": "Háztartás",
+			"sub": [
+				{ "id": 7, "label": "Groceries" },
+				{ "id": 7662345, "label": "Fast Food" },
+				{ "id": 765512, "label": "Ordered" },
+				{ "id": 76225, "label": "Snack" },
+				{ "id": 7621315, "label": "Restaurant" }
+			]
+		},
+		{
+			"id": "eweqqwadaas234sdasdafasd-vsdfsdf",
+			"label": "Hitel",
+			"sub": [
+				{ "id": 7, "label": "Groceries" },
+				{ "id": 7662345, "label": "Fast Food" },
+				{ "id": 765512, "label": "Ordered" },
+				{ "id": 76225, "label": "Snack" },
+				{ "id": 7621315, "label": "Restaurant" }
+			]
+		}
+	]
+}

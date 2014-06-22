@@ -1,0 +1,109 @@
+div.categories-list {
+	ul {
+		list-style: none;
+		li {
+			padding: 10px 0 0 0;
+		}
+
+		div.new-editor {
+			a.btn {
+				margin-top: 10px;
+			}
+		}
+
+		div.category-item {
+			div.new-editor {
+				a.btn,input {
+					margin: 10px 0 0 40px;
+				}
+			}
+		}
+	}
+}
+
+form#transactionForm {
+	.form-group {
+    	margin-bottom: 13px;
+    }
+    label {
+		font-size: 2rem;
+		font-weight: normal;
+    }
+    .glyphicon {
+    	color: #999999;
+    }
+
+    a {
+    	&.btn.btn-save {
+    		background: #21A83C;
+    		color: white;
+    	}
+    }
+}
+
+
+div.category-selector-container {
+	height: 150px;
+	overflow-y: auto;
+	background: #FCFCFC;
+	border: solid 1px #DDDDDD;
+
+	ul {
+		list-style: none;
+		padding: 0 5px 0 5px;
+
+		a.top-level {
+			//background: #428bca;
+			//color: white;
+			padding: 5px;
+			width: 100%;
+            display: inline-block;
+            border-bottom: white 1px solid;
+		}
+		a.sub-level {
+			padding-left: 10px;
+            width: 100%;
+            display: inline-block;
+
+            &:hover {
+            	text-decoration: none;
+				font-weight: bold;
+            }
+
+			&.selected {
+            	background: #EEE;
+
+				&:hover {
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.animate-show {
+  opacity:1;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display:block!important;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height:0;
+  opacity:0;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

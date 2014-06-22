@@ -1,0 +1,50 @@
+<div class="editor" ng-show="transaction">
+	
+	<form id="transactionForm" class="" role="form">
+		<!-- AMOUNT -->
+		<div class="form-group has-feedback">
+			<span>
+				<label class="control-label" for="amount">Összeg</label>
+				<span class="text-muted">{{formattedAmount()}}</span>
+			</span>
+
+			<input class="form-control" id="amount" type="number" ng-model="transaction.amount"></input>
+		</div>
+
+		<!-- DATE -->
+		<div class="form-group">
+			<span>
+				<label class="control-label" for="date">Dátum</label>
+				<span class="text-muted">{{transactionDate()}}</span>
+				<a href="#" slide-toggle=".date-container">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</a>
+			</span>
+			<div class="date-container slideable" duration="0.3s">
+				<input class="form-control" id="date" type="date" ng-model="transaction.date"></input>
+			</div>
+		</div>
+
+		<!-- CATEGORY -->
+		<div class="form-group">
+			<span>
+				<label class="control-label">Kategória</label>
+				<span class="text-muted" ng-show="selectedCategory.label">{{selectedCategory.label}}</span>
+				<a href="#" slide-toggle=".category-selector-container">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</a>
+			</span>
+			<div class="category-selector-container slideable" initiallyvisible="true">
+				<div class="category-selector" selected-category="selectedCategory"></div>
+			</div>
+		</div>
+
+		<!-- BUTTONS -->
+		<div class="form-group">
+			<a ng-click="saveTransaction()" href="#" class="btn btn-save"><span class=""></span>Mentés</a>
+			<a ng-click="cancel()" href="#" class=""><span class="text-danger">mégse</span></a>
+		</div>
+
+
+	</form>
+</div>

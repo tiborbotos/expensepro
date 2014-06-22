@@ -1,0 +1,72 @@
+div.categories-list ul {
+  list-style: none;
+}
+div.categories-list ul li {
+  padding: 10px 0 0 0;
+}
+div.categories-list ul div.new-editor a.btn {
+  margin-top: 10px;
+}
+div.categories-list ul div.category-item div.new-editor a.btn,
+div.categories-list ul div.category-item div.new-editor input {
+  margin: 10px 0 0 40px;
+}
+form#transactionForm .form-group {
+  margin-bottom: 13px;
+}
+form#transactionForm label {
+  font-size: 2rem;
+  font-weight: normal;
+}
+form#transactionForm .glyphicon {
+  color: #999999;
+}
+form#transactionForm a.btn.btn-save {
+  background: #21A83C;
+  color: white;
+}
+div.category-selector-container {
+  height: 150px;
+  overflow-y: auto;
+  background: #FCFCFC;
+  border: solid 1px #DDDDDD;
+}
+div.category-selector-container ul {
+  list-style: none;
+  padding: 0 5px 0 5px;
+}
+div.category-selector-container ul a.top-level {
+  padding: 5px;
+  width: 100%;
+  display: inline-block;
+  border-bottom: white 1px solid;
+}
+div.category-selector-container ul a.sub-level {
+  padding-left: 10px;
+  width: 100%;
+  display: inline-block;
+}
+div.category-selector-container ul a.sub-level:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+div.category-selector-container ul a.sub-level.selected {
+  background: #EEE;
+}
+.animate-show {
+  opacity: 1;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: block!important;
+}
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
