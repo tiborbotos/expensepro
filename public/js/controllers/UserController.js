@@ -37,9 +37,9 @@ define(['angular', 'js/controllers/controllers', 'js/model/UserService', 'angula
     		var pass = $('#loginPass').val();
 
     		if (email && pass) {
-    			//$modalInstance.close('');
+    			//
     			UserService.login(email, pass).then(function (user) {
-
+					$modalInstance.close('');
     			}, function (error) {
     				console.log('Error: ', error);
     				$scope.error = error;

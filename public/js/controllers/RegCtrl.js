@@ -35,17 +35,18 @@ define(['angular', 'js/controllers/controllers'], function (angular_, controller
 
 			var reg = UserService.register(user).then(function () {
 				$location.path('/');
-				//$scope.$apply();
 			}, function (errorMessage) {
 				$scope.loading = false;
-				//$scope.$apply();
 				$scope.error = errorMessage;
 			});
-
 		};
 
 		$scope.cancel = function () {
-			$location.path('/');
+			if (($scope.regData.email && $scope.regData.email.trim() !== "" && confirm("Are you sure you want to loose the changes?")) ||
+			 	($scope.regData.email && $scope.regData.email.trim() === "") ||
+			 	($scope.regData.email === undefined)){
+				$location.path('/');
+			}
 		};
 	}]);
 });

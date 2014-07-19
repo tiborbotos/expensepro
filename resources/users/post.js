@@ -7,4 +7,4 @@ if (this.nid && this.nid !== '') { // oath check
 }
 
 this.createdAt = (new Date()).getTime();
-
+protect('createdAt');
