@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
+<style>
+    .ng-hide {
+        /* this is just another form of hiding an element */
+        display:block!important;
+        position:absolute;
+        top:-9999px;
+        left:-9999px;
+    }
+</style>
 <body ng-cloak class="ng-cloak">
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -50,15 +59,15 @@
 
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="UserCtrl">
-
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Költség</a></li>
-					<li><a href="#">Előzmények</a></li>
-					<li><a href="#">Beállitások</a></li>
+					<li class="active"><a href="#">expense</a></li>
+					<li><a href="#">history</a></li>
+					<li><a href="#">settings</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right ng-hide" ng-hide="initializing()">
 					<li ng-hide="loggedIn()"><a href="#" ng-click="login()">Belépés</a></li>
 					<li ng-hide="loggedIn()"><a href="#/registration">Regisztráció</a></li>
+                    <span ng-show="loggedIn()">Hi {{username}}</span>
 					<li ng-show="loggedIn()"><a href="#" ng-click="logout()">Kilepes</a></li>
 				</ul>
 			</div>
@@ -67,11 +76,7 @@
 
 	<div ng-view></div>
 
-
-
-
-
-<script data-main="js/init.js" src="lib/requirejs/require.js"></script>
+    <script data-main="js/init.js" src="lib/requirejs/require.js"></script>
 
 </body>
 </html>

@@ -7,8 +7,8 @@ define(['angular', 'angular-sanitize', 'angular-route', 'angular-animate', 'angu
 	'js/controllers/TransactionCtrl',
 	'js/controllers/UserController',
 	'js/controllers/RegCtrl',
-	'js/model/CategoryModel',
-	'js/model/TransactionModel'], function() {
+	'js/model/CategoryService',
+	'js/model/TransactionModel_'], function() {
     'use strict';
 
     var module = angular.module('em', ['ngSanitize', 'ngRoute', 'ngAnimate', 'ui.bootstrap',
