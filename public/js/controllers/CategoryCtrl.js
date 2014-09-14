@@ -1,7 +1,7 @@
 define(['angular', 'js/controllers/controllers'], function (angular_, controllers) {
 	
 
-	controllers.controller('CategoryCtrl', ['$scope', '$location', '$http', 'CategoryModel', function($scope, $location, $http, CategoryModel) {
+	controllers.controller('CategoryCtrl', ['$scope', '$location', '$http', 'CategoryService', function($scope, $location, $http, CategoryService) {
 
 		$scope.categories = [];
 		$scope.editedcategory = {'category': undefined};
@@ -29,7 +29,7 @@ define(['angular', 'js/controllers/controllers'], function (angular_, controller
 
 
 		function init() {
-			CategoryModel.categories(function (data) {
+			CategoryService.categories(function (data) {
 				$scope.categories = data;
 			});
 		}

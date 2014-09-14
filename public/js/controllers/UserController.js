@@ -27,13 +27,16 @@ define(['angular', 'js/controllers/controllers', 'js/model/UserService', 'angula
 			};
 
 			$scope.username = function () {
-				return UserService.me.username;
+				return ($scope.loggedIn()) ? UserService.me.username : '';
 			};
 
 			$scope.showRegistration = function () {
 				$location.path('/#/registration');
 			};
 
+			$scope.expensePage = function () {
+				$location.path('expense');
+			};
 
 			function init() {
 				UserService.initUser().then(function (loggedIn) {

@@ -1,26 +1,22 @@
-define(['js/model/model', 'js/model/UserService', 'angular'], function(emModel, UserService) {
+define(['js/model/model', 'js/model/UserService', 'angular'], function(emModel) {
 	'use strict';
 
-	emModel.service('CategoryModel', ['$http', function($http) {
+	emModel.service('CategoryService', ['UserService', function(UserService) {
 		var _categories = undefined;
 		var self = this;
 
-		this.categories = function(callback) {
+		this.categories = function (callback) {
 			if (_categories) {
 				callback(_categories);
 			} else {
-				this.loadCategories(callback);
+				loadCategories(callback);
 			}
 		};
 
-		this.initCategories = function (categories) {
-			self._categories = categories;
-		};
-
-		function loadCategories(callback) {
+		function loadCategories (callback) {
 			var query = {"userid": UserService.uid()};
 			dpd.categories.get(query, function (result) {
-				self._categories = result.categories;
+				self._categories = result[0].categories.categories;
 				callback(self._categories);
 			});
 		}

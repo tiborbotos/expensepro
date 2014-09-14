@@ -1,7 +1,10 @@
-define(['js/model/model', 'js/model/InitialCategories', 'js/model/CategoryService', 'dpd'], function(emModel, InitialCategories) {
+define([
+	'js/model/model',
+	'js/model/InitialCategories',
+	'dpd'], function(emModel, InitialCategories) {
 	'use strict';
 
-	emModel.service('UserService', ['$q', 'CategoryModel', function($q, CategoryModel) {
+	emModel.service('UserService', ['$q', function($q) {
 		var self = this;
 		var session = {};
 		var me = {};
@@ -38,7 +41,7 @@ define(['js/model/model', 'js/model/InitialCategories', 'js/model/CategoryServic
 						} else {
 							// login
 							self.login(user.username, saltedPass, true).then(function (session) {
-								CategoryModel.initCategories(InitialCategories);
+								// TODO init categories (pre-fetch, so user won't have to wait for it)
 								deferred.resolve();
 							}, function (error) {
 								console.log('Failed to login after register!', error);
@@ -89,7 +92,7 @@ define(['js/model/model', 'js/model/InitialCategories', 'js/model/CategoryServic
 
 		this.uid = function () {
 			if (self.loggedIn === true) {
-				return self.uid;
+				return self.me.id;
 			}
 			return null;
 		};
